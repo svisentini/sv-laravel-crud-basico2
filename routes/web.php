@@ -23,3 +23,5 @@ Route::put("student/edit/{student}","App\Http\Controllers\StudentController@upda
 Route::get("/student/{student}", "App\Http\Controllers\StudentController@show")->name('studentShow');
 Route::post("/student", "App\Http\Controllers\StudentController@store")->name('studentStore');
 Route::delete("/student/{student}", "App\Http\Controllers\StudentController@destroy")->name('studentDestroy');
+
+Route::get("/courses", "App\Http\Controllers\CoursesController@index")->name('coursesFilter');

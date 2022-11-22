@@ -1,4 +1,4 @@
-@extends('students.layout')
+@extends('layout.layout')
 @section('content')
 
     <div class="card" style="margin:20px;">
@@ -8,7 +8,7 @@
             <form action="{{ route('studentUpdate',['student' => $student->id ]) }}" method="post">
                 @csrf
                 @method("put")
-                <input type="hidden" name="id" id="id" value="{{$student->id}}" id="id" />
+                <input type="hidden" name="id" id="id" value="{{$student->id}}" id="id"/>
                 <label>Name</label></br>
                 <input type="text" name="name" id="name" value="{{$student->name}}" class="form-control"></br>
                 <label>Address</label></br>
