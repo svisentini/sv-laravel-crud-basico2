@@ -4,3 +4,5 @@ https://tutorial101.blogspot.com/2022/05/laravel-9-crud-create-read-update-and.h
 
 
 # sv-laravel-crud-basico2
+
+![img.png](img.png)
