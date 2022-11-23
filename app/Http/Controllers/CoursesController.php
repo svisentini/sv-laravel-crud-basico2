@@ -27,7 +27,7 @@ class CoursesController extends Controller
      */
     public function create()
     {
-        //
+        return view("courses.create");
     }
 
     /**
@@ -38,7 +38,13 @@ class CoursesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $course = new Courses();
+        $course->name = $request->name;
+        $course->start_date = $request->startDate;
+        $course->end_date = $request->endDate;
+        $course->save();
+
+        return redirect()->route("coursesFilter");
     }
 
     /**

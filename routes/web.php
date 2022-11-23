@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 //Route::resource("/student", App\Http\Controllers\StudentController::class);
 Route::get("/", "App\Http\Controllers\StudentController@home")->name('homeApp');
+
+
 Route::get("/student", "App\Http\Controllers\StudentController@index")->name('studentFilter');
 Route::get("/student/create", "App\Http\Controllers\StudentController@create")->name('studentCreate');
 Route::get("student/edit/{student}","App\Http\Controllers\StudentController@edit")->name('studentEdit');
@@ -24,4 +26,7 @@ Route::get("/student/{student}", "App\Http\Controllers\StudentController@show")-
 Route::post("/student", "App\Http\Controllers\StudentController@store")->name('studentStore');
 Route::delete("/student/{student}", "App\Http\Controllers\StudentController@destroy")->name('studentDestroy');
 
+
 Route::get("/courses", "App\Http\Controllers\CoursesController@index")->name('coursesFilter');
+Route::get("/courses/create", "App\Http\Controllers\CoursesController@create")->name('coursesCreate');
+Route::post("/courses", "App\Http\Controllers\CoursesController@store")->name('coursesStore');

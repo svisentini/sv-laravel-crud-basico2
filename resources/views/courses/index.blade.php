@@ -8,7 +8,7 @@
                         <h3>Courses</h3>
                     </div>
                     <div class="card-body">
-                        <a href="#" class="btn btn-success btn-sm" title="Add New Course">
+                        <a href="{{ route("coursesCreate") }}" class="btn btn-success btn-sm" title="Add New Course">
                             Add New Course
                         </a>
                         <br/>
